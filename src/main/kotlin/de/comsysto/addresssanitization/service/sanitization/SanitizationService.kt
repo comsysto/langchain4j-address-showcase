@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class SanitizationService(val sanitizationAssistant: SanitizationAssistant) {
-    fun getSanitizedAddress(address: String): Address {
+    fun getSanitizedAddress(address: String): String {
         return sanitizationAssistant.getSanitizedAddress(address)
     }
 }
