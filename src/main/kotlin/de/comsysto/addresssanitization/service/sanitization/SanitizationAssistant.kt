@@ -7,10 +7,13 @@ interface SanitizationAssistant {
 
     @UserMessage("""
         The following text includes a possibly incorrectly formatted german address. 
-        Extract the street, zipCode, houseNumber and city from it.
-        It is possible that some parts are missing. Fill missing values with null.
+        Extract the street, zipCode, houseNumber and city from it and return it in the format:
+        'street houseNumber, zipCode city'
+        It is possible that some address parts are missing in the input. Omit these parts in the output.
+        
+        No explanation, just the formatted address.
         
         Input address: {{address}}
     """)
-    fun getSanitizedAddress(@V("address") address: String): Address
+    fun getSanitizedAddress(@V("address") address: String): String
 }
