@@ -10,7 +10,7 @@ class ZipCodeServiceTool(private val restTemplate: RestTemplate) {
 
     @Tool(
         """
-                Retrieve zip code for a given city name and country code.
+        Retrieve zip code for a given city name and country code.
         """
     )
     fun getZipCodeForCityAndCountry(

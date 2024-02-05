@@ -1,0 +1,11 @@
+GET http://localhost:8080/sanitize?address=Riesstraße 22 80992 München
+###
+
+GET http://localhost:8080/sanitize?address=22 80992 Riesstraße München
+###
+
+GET http://localhost:8080/sanitize?address=22 a 80992 Riesstraße München
+###
+
+GET http://localhost:8080/sanitize?address=Riesstraße 22 München
+###
